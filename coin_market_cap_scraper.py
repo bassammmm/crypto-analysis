@@ -14,9 +14,10 @@ from selenium.webdriver.common.by import By
 
 
 class CoinMarketCapScraper:
-    def __init__(self,base_url,interval):
+    def __init__(self,base_url,interval,percentage):
         self.base_url = base_url
         self.interval = interval
+        self.percentage = percentage
         self.last_call = datetime.datetime.now()
 
 
@@ -47,22 +48,41 @@ class CoinMarketCapScraper:
     def get_crypto_information(self,link,id):
         url = self.base_url + link + 'markets/'
         text = self.get_request(url)
-        soup = BeautifulSoup(text,'lxml')
-        h2 = soup.find_all('h2',attrs={"class":re.compile(" h1"),"color": "text"})
-        print(h2[0])
-        coin_name = h2[0].get_text(separator=' ')
-        print(coin_name)
-        price = soup.find_all('div',attrs={'class':re.compile('priceValue')})
-        price = price[0].get_text()
+        if text:
+            soup = BeautifulSoup(text,'lxml')
+            h2 = soup.find_all('h2',attrs={"class":re.compile(" h1"),"color": "text"})
+            print(h2[0])
+            coin_name = h2[0].get_text(separator=' ')
+            print(coin_name)
+            price = soup.find_all('div',attrs={'class':re.compile('priceValue')})
+            price = price[0].get_text()
+            while '$' in price:
+                price = price.replace('$','')
+            while ',' in price:
+                price = price.replace(',','')
 
 
-        coin_slug = link.split('/')[-2]
-        binance = self.find_binance_in_list(coin_slug)
-        binance = "True" if binance else "False"
-        max_value_price = self.get_coin_max_value(id)
+            coin_slug = link.split('/')[-2]
+            binance = self.find_binance_in_list(coin_slug)
+            binance = "True" if binance else "False"
+            max_value_price = self.get_coin_max_value(id)
+            percentage_change = self.get_percentage_change(price,max_value_price)
+            gained_val = "False"
+            if percentage_change>=self.percentage:
+                gained_val="True"
+            self.write_to_csv_result(coin_name,price,binance,max_value_price,percentage_change,gained_val)
 
-        self.write_to_csv_result(coin_name,price,binance,max_value_price)
 
+
+    def get_percentage_change(self,price,max_value_price):
+        price = float(price)
+        max_value_price = float(max_value_price)
+
+        diff = price - max_value_price
+
+        percent = (diff / max_value_price) * 100
+
+        return percent
 
 
     def get_coin_max_value(self,id):
@@ -90,16 +110,24 @@ class CoinMarketCapScraper:
             ('range', 'ALL'),
         )
 
-        response = self.get_request('https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail/chart',headers, params)
 
-        data = json.loads(response)
-        data = data["data"]["points"]
-        points = []
-        for k, v in data.items():
-            points.append(v['v'])
-        max_val = max(points, key=lambda x: x[0])
-        max_val = max_val[0]
-        return max_val
+
+        response = self.get_request('https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail/chart',headers, params)
+        while not response:
+            response = self.get_request('https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail/chart',
+                                        headers, params)
+
+        if response:
+            data = json.loads(response)
+            data = data["data"]["points"]
+            points = []
+            for k, v in data.items():
+                points.append(v['v'])
+            max_val = max(points, key=lambda x: x[0])
+            max_val = max_val[0]
+            return max_val
+
+        return 0
 
     def find_binance_in_list(self,coin_slug):
         headers = {
@@ -132,11 +160,12 @@ class CoinMarketCapScraper:
 
 
         response = self.get_request('https://api.coinmarketcap.com/data-api/v3/cryptocurrency/market-pairs/latest',headers, params)
-        market_pairs = json.loads(response)["data"]["marketPairs"]
-        for pairs in market_pairs:
-            if pairs["exchangeName"] == "Binance":
-                return True
-        return False
+        if response:
+            market_pairs = json.loads(response)["data"]["marketPairs"]
+            for pairs in market_pairs:
+                if pairs["exchangeName"] == "Binance":
+                    return True
+            return False
 
 
 
@@ -170,10 +199,10 @@ class CoinMarketCapScraper:
         return text
 
 
-    def write_to_csv_result(self,name,price,binance,max_value_price):
+    def write_to_csv_result(self,name,price,binance,max_value_price,percentage_change,gained_val):
         with open('coin_val.csv','a',encoding='utf-8',newline='') as file:
             csv_writer = csv.writer(file)
-            rec = [name,price,binance,max_value_price,datetime.datetime.now()]
+            rec = [name,price,binance,max_value_price,percentage_change,gained_val,datetime.datetime.now()]
             print(rec)
             csv_writer.writerow(rec)
 
@@ -206,6 +235,9 @@ class CoinMarketCapScraper:
         response = requests.get(url,headers=headers,params=params)
         print(f"Getting URL : {url}")
         print(response.status_code)
+        if str(response.status_code)!="200":
+            print(response.text)
+            return False
         return response.text
 
 
@@ -214,15 +246,23 @@ class CoinMarketCapScraper:
 
 
 if __name__ == '__main__':
+
+    percentage = 5
+
     base_url = "https://coinmarketcap.com"
+
+
     time_interval = 5
 
-    c = CoinMarketCapScraper(base_url,time_interval)
+    c = CoinMarketCapScraper(base_url,time_interval,percentage)
 
     # for i in range(1,3):
     #     soup = c.get_page_urls(i)
 
 
     data = c.read_from_csv()
-    for i in data:
+    for i in data[98:]:
+        print("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+        print("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+        print(i[0])
         c.get_crypto_information(i[1],i[2])
