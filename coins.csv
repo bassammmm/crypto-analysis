@@ -1,0 +1,200 @@
+Bitcoin BTC,/currencies/bitcoin/,1
+Ethereum ETH,/currencies/ethereum/,1027
+Tether USDT,/currencies/tether/,825
+BNB BNB,/currencies/bnb/,1839
+USD Coin USDC,/currencies/usd-coin/,3408
+XRP XRP,/currencies/xrp/,52
+Terra LUNA,/currencies/terra-luna/,4172
+Cardano ADA,/currencies/cardano/,2010
+Solana SOL,/currencies/solana/,5426
+Avalanche AVAX,/currencies/avalanche/,5805
+Polkadot DOT,/currencies/polkadot-new/,6636
+Binance USD BUSD,/currencies/binance-usd/,4687
+Dogecoin DOGE,/currencies/dogecoin/,74
+TerraUSD UST,/currencies/terrausd/,7129
+Shiba Inu SHIB,/currencies/shiba-inu/,5994
+Polygon MATIC,/currencies/polygon/,3890
+Wrapped Bitcoin WBTC,/currencies/wrapped-bitcoin/,3717
+Cronos CRO,/currencies/cronos/,3635
+Dai DAI,/currencies/multi-collateral-dai/,4943
+Cosmos ATOM,/currencies/cosmos/,3794
+Litecoin LTC,/currencies/litecoin/,2
+NEAR Protocol NEAR,/currencies/near-protocol/,6535
+Chainlink LINK,/currencies/chainlink/,1975
+Uniswap UNI,/currencies/uniswap/,7083
+TRON TRX,/currencies/tron/,1958
+FTX Token FTT,/currencies/ftx-token/,4195
+Bitcoin Cash BCH,/currencies/bitcoin-cash/,1831
+UNUS SED LEO LEO,/currencies/unus-sed-leo/,3957
+Algorand ALGO,/currencies/algorand/,4030
+Stellar XLM,/currencies/stellar/,512
+Decentraland MANA,/currencies/decentraland/,1966
+Bitcoin BEP2 BTCB,/currencies/bitcoin-bep2/,4023
+Hedera HBAR,/currencies/hedera/,4642
+Ethereum Classic ETC,/currencies/ethereum-classic/,1321
+Internet Computer ICP,/currencies/internet-computer/,8916
+The Sandbox SAND,/currencies/the-sandbox/,6210
+ApeCoin APE,/currencies/apecoin-ape/,18876
+Waves WAVES,/currencies/waves/,1274
+Monero XMR,/currencies/monero/,328
+Elrond EGLD,/currencies/elrond-egld/,6892
+Fantom FTM,/currencies/fantom/,3513
+VeChain VET,/currencies/vechain/,3077
+Filecoin FIL,/currencies/filecoin/,2280
+Axie Infinity AXS,/currencies/axie-infinity/,6783
+Klaytn KLAY,/currencies/klaytn/,4256
+Theta Network THETA,/currencies/theta-network/,2416
+Tezos XTZ,/currencies/tezos/,2011
+THORChain RUNE,/currencies/thorchain/,4157
+Helium HNT,/currencies/helium/,5665
+Zcash ZEC,/currencies/zcash/,1437
+Aave AAVE,/currencies/aave/,7278
+EOS EOS,/currencies/eos/,1765
+IOTA MIOTA,/currencies/iota/,1720
+Flow FLOW,/currencies/flow/,4558
+Maker MKR,/currencies/maker/,1518
+The Graph GRT,/currencies/the-graph/,6719
+PancakeSwap CAKE,/currencies/pancakeswap/,7186
+BitTorrent-New BTT,/currencies/bittorrent-new/,16086
+Stacks STX,/currencies/stacks/,4847
+Gala GALA,/currencies/gala/,7080
+Harmony ONE,/currencies/harmony/,3945
+eCash XEC,/currencies/ecash/,10791
+Bitcoin SV BSV,/currencies/bitcoin-sv/,3602
+Neo NEO,/currencies/neo/,1376
+KuCoin Token KCS,/currencies/kucoin-token/,2087
+Quant QNT,/currencies/quant/,3155
+Huobi Token HT,/currencies/huobi-token/,2502
+TrueUSD TUSD,/currencies/trueusd/,2563
+Celo CELO,/currencies/celo/,5567
+Enjin Coin ENJ,/currencies/enjin-coin/,2130
+Basic Attention Token BAT,/currencies/basic-attention-token/,1697
+Chiliz CHZ,/currencies/chiliz/,4066
+Nexo NEXO,/currencies/nexo/,2694
+Kusama KSM,/currencies/kusama/,5034
+OKB OKB,/currencies/okb/,3897
+Arweave AR,/currencies/arweave/,5632
+Amp AMP,/currencies/amp/,6945
+Kadena KDA,/currencies/kadena/,5647
+Dash DASH,/currencies/dash/,131
+Convex Finance CVX,/currencies/convex-finance/,9903
+Curve DAO Token CRV,/currencies/curve-dao-token/,6538
+Loopring LRC,/currencies/loopring/,1934
+Mina MINA,/currencies/mina/,8646
+Pax Dollar USDP,/currencies/paxos-standard/,3330
+NEM XEM,/currencies/nem/,873
+Theta Fuel TFUEL,/currencies/theta-fuel/,3822
+Oasis Network ROSE,/currencies/oasis-network/,7653
+Compound COMP,/currencies/compound/,5692
+Celsius CEL,/currencies/celsius/,2700
+IoTeX IOTX,/currencies/iotex/,2777
+Secret SCRT,/currencies/secret/,5604
+Symbol XYM,/currencies/symbol/,8677
+yearn.finance YFI,/currencies/yearn-finance/,5864
+Holo HOT,/currencies/holo/,2682
+Anchor Protocol ANC,/currencies/anchor-protocol/,8857
+Decred DCR,/currencies/decred/,1168
+BORA BORA,/currencies/bora/,3801
+Neutrino USD USDN,/currencies/neutrino-usd/,5068
+SXP SXP,/currencies/sxp/,4279
+1inch Network 1INCH,/currencies/1inch/,8104
+XDC Network XDC,/currencies/xinfin/,2634
+OMG Network OMG,/currencies/omg/,1808
+WAX WAXP,/currencies/wax/,2300
+renBTC RENBTC,/currencies/renbtc/,5777
+Render Token RNDR,/currencies/render-token/,5690
+Qtum QTUM,/currencies/qtum/,1684
+Bancor BNT,/currencies/bancor/,1727
+Ankr ANKR,/currencies/ankr/,3783
+Synthetix SNX,/currencies/synthetix-network-token/,2586
+PAX Gold PAXG,/currencies/pax-gold/,4705
+ICON ICX,/currencies/icon/,2099
+Kyber Network Crystal v2 KNC,/currencies/kyber-network-crystal-v2/,9444
+Gnosis GNO,/currencies/gnosis-gno/,1659
+Ravencoin RVN,/currencies/ravencoin/,2577
+Audius AUDIO,/currencies/audius/,7455
+Livepeer LPT,/currencies/livepeer/,3640
+WOO Network WOO,/currencies/wootrade/,7501
+Kava KAVA,/currencies/kava/,4846
+Zilliqa ZIL,/currencies/zilliqa/,2469
+Bitcoin Gold BTG,/currencies/bitcoin-gold/,2083
+Moonbeam GLMR,/currencies/moonbeam/,6836
+Rally RLY,/currencies/rally/,8075
+Horizen ZEN,/currencies/horizen/,1698
+Voyager Token VGX,/currencies/voyager-token/,1817
+UMA UMA,/currencies/uma/,5617
+GateToken GT,/currencies/gatetoken/,4269
+Velas VLX,/currencies/velas/,4747
+Golem GLM,/currencies/golem-network-tokens/,1455
+Siacoin SC,/currencies/siacoin/,1042
+IOST IOST,/currencies/iostoken/,2405
+0x ZRX,/currencies/0x/,1896
+Immutable X IMX,/currencies/immutable-x/,10603
+Ontology ONT,/currencies/ontology/,2566
+SwissBorg CHSB,/currencies/swissborg/,2499
+SKALE Network SKL,/currencies/skale-network/,5691
+STEPN GMT,/currencies/green-metaverse-token/,18069
+APENFT NFT,/currencies/apenft/,9816
+SushiSwap SUSHI,/currencies/sushiswap/,6758
+Fei USD FEI,/currencies/fei-usd/,8642
+Storj STORJ,/currencies/storj/,1772
+DigitalBits XDB,/currencies/digitalbits/,4566
+Keep Network KEEP,/currencies/keep-network/,5566
+Dogelon Mars ELON,/currencies/dogelon/,9436
+Revain REV,/currencies/revain/,2135
+Gemini Dollar GUSD,/currencies/gemini-dollar/,3306
+JUST JST,/currencies/just/,5488
+Hive HIVE,/currencies/hive-blockchain/,5370
+Ren REN,/currencies/ren/,2539
+Illuvium ILV,/currencies/illuvium/,8719
+Syscoin SYS,/currencies/syscoin/,541
+Polymath POLY,/currencies/polymath-network/,2496
+dYdX DYDX,/currencies/dydx/,11156
+Ethereum Name Service ENS,/currencies/ethereum-name-service/,13855
+ConstitutionDAO PEOPLE,/currencies/constitutiondao/,14806
+Serum SRM,/currencies/serum/,6187
+Nervos Network CKB,/currencies/nervos-network/,4948
+Flux FLUX,/currencies/zel/,3029
+Spell Token SPELL,/currencies/spell-token/,11289
+Ultra UOS,/currencies/ultra/,4189
+DigiByte DGB,/currencies/digibyte/,109
+Casper CSPR,/currencies/casper/,5899
+Telcoin TEL,/currencies/telcoin/,2394
+MovieBloc MBL,/currencies/moviebloc/,4038
+CEEK VR CEEK,/currencies/ceek-vr/,2856
+Ocean Protocol OCEAN,/currencies/ocean-protocol/,3911
+Perpetual Protocol PERP,/currencies/perpetual-protocol/,6950
+Yield Guild Games YGG,/currencies/yield-guild-games/,10688
+Nano XNO,/currencies/nano/,1567
+Persistence XPRT,/currencies/persistence/,7281
+Trust Wallet Token TWT,/currencies/trust-wallet-token/,5964
+NuCypher NU,/currencies/nucypher/,4761
+Braintrust BTRST,/currencies/braintrust/,11584
+PlayDapp PLA,/currencies/playdapp/,7461
+Frax Share FXS,/currencies/frax-share/,6953
+Celer Network CELR,/currencies/celer-network/,3814
+Origin Protocol OGN,/currencies/origin-protocol/,5117
+MXC MXC,/currencies/mxc/,3628
+Coin98 C98,/currencies/coin98/,10903
+Lisk LSK,/currencies/lisk/,1214
+Injective INJ,/currencies/injective-protocol/,7226
+Dent DENT,/currencies/dent/,1886
+WINkLink WIN,/currencies/wink/,4206
+SuperFarm SUPER,/currencies/superfarm/,8290
+XYO XYO,/currencies/xyo/,2765
+Raydium RAY,/currencies/raydium/,8526
+Fetch.ai FET,/currencies/fetch/,3773
+Powerledger POWR,/currencies/power-ledger/,2132
+Tribe TRIBE,/currencies/tribe/,9025
+Vulcan Forged PYR PYR,/currencies/vulcan-forged-pyr/,9308
+Chromia CHR,/currencies/chromia/,3978
+COTI COTI,/currencies/coti/,3992
+Chia XCH,/currencies/chia-network/,9258
+Ontology Gas ONG,/currencies/ontology-gas/,3217
+Request REQ,/currencies/request/,2071
+MediBloc MED,/currencies/medibloc/,2303
+Mdex MDX,/currencies/mdex/,8335
+WazirX WRX,/currencies/wazirx/,5161
+Function X FX,/currencies/function-x/,3884
+Orbs ORBS,/currencies/orbs/,3835
+Status SNT,/currencies/status/,1759

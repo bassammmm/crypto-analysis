@@ -1,0 +1,4 @@
+ignore
+test.py
+.ipynb_checkpoints
+.idea
